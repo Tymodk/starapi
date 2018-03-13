@@ -1,5 +1,130 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {font-family:"STARWARS";src:url("resources/STARWARS/STARWARS.eot?") format("eot"),url("resources/STARWARS/STARWARS.woff") format("woff"),url("resources/STARWARS/STARWARS.ttf") format("truetype"),url("resources/STARWARS/STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'STARWARS';
+  background-image: url("resources/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+li>a{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 64px;
+}
+.page-header{
+	border-bottom: none!important;
+}
+.todo {
+    position: relative;
+}
+.todo .actions {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.todo:hover .actions {
+    display: block;
+}
+.nav-tabs
+{
+	margin-left: 41px; 
+}
+.starHeader
+{
+	font-family: 'STARWARS'!important;
+	font-size: 70px;
+	color: #000000;
+    text-shadow: -2px 0 #ffe919, 0 2px #ffe919, 2px 0 #ffe919, 0 -2px #ffe919;
+    margin-left: 42px;
+}
+.starSmall{
+	font-family: 'STARWARS'!important;
+	margin-left: 1%;
+	color: #ffe919;
+    text-shadow: -3px 0 #000000, 0 3px #000000, 3px 0 #000000, 0 -3px #000000;
+}
+.load{
+	font-family: 'STARWARS'!important;
+	font-size: 40px;
+	color: #000000;
+    text-shadow: -2px 0 #ffe919, 0 2px #ffe919, 2px 0 #ffe919, 0 -2px #ffe919;
+    margin-left: 42px;
+}
+
+
+.ship{    
+    position: absolute;
+    max-width: 150px;
+    height: auto; 
+    width: auto; 
+    left: 45%;
+    top: 45%;
+    
+    animation-name: shipanim;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.woosh1{
+    position: absolute;
+    max-height: 75px;
+    height: auto; 
+    width: auto; 
+    left: 43%;
+    top: 35%;
+    opacity: 0;
+    animation-name: woosh1;
+    animation-duration: 6s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+}
+.woosh2{
+    position: absolute;
+    max-height: 75px;
+    height: auto; 
+    width: auto; 
+    left: 51%;
+    top: 35%;
+    opacity: 0;
+    animation-name: woosh2;
+    animation-duration: 6s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+}
+
+
+ @keyframes shipanim{
+    0%{left: 45%; top:45%;}
+    10%{left: 46%; top: 47%;}        
+    20%{left: 46%; top: 46%;}        
+    30%{left: 43%; top: 42%;}
+    40%{left: 45%; top: 43%;}
+    50%{left: 46%; top: 47%;}
+    60%{left: 45%; top: 43%}
+    70%{left: 46%; top: 46%}
+    80%{left: 44%;}
+    90%{left: 46%; top: 47%;}
+    100%{left: 45%; top:45%;}    
+}
+ @keyframes woosh1{
+     0%{opacity:0;}
+     22%{opacity: 0; top:35%}
+     25%{opacity: 1; }
+     45%{opacity: 1; }
+     47%{opacity:0;}
+     48%{opacity: 0; top: 60%;} 
+}
+ @keyframes woosh2{
+       0%{opacity:0;}
+     62%{opacity: 0; top:35%}
+     65%{opacity: 1; }
+     85%{opacity: 1; }
+     87{opacity: 0;}
+     88%{opacity: 0; top: 60%;}  
+}
+   
